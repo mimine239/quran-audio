@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quran Audio API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+    }
+    code {
+      background-color: #f8f9fa;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+    pre {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .endpoint {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quran Audio API</h1>
+  <p>Bienvenue sur l'API Quran Audio. Cette API fournit des fichiers audio du Coran récités par Al Hussary.</p>
+  
+  <div class="endpoint">
+    <h2>Sources Audio</h2>
+    <p>Obtenir les informations sur les sources audio disponibles :</p>
+    <code>GET /data/audio-sources.json</code>
+    <p>Exemple de réponse :</p>
+    <pre>{
+  "hussary": {
+    "baseUrl": "https://VOTRE_NOM_UTILISATEUR.github.io/quran-audio/audio/hussary",
+    "format": "mp3"
+  }
+}</pre>
+  </div>
+  
+  <div class="endpoint">
+    <h2>Fichiers Audio</h2>
+    <p>Pour accéder à un fichier audio spécifique, utilisez l'URL suivante :</p>
+    <code>GET /audio/hussary/{surah_number}/{filename}</code>
+    <p>Exemple :</p>
+    <code>GET /audio/hussary/001/001_Al-Fatiha.mp3</code>
+  </div>
+  
+  <p>Pour utiliser cette API dans votre application, construisez les URLs en utilisant le baseUrl fourni dans audio-sources.json.</p>
+  
+  <footer>
+    <p>© 2025 - API Quran Audio</p>
+  </footer>
+</body>
+</html>
