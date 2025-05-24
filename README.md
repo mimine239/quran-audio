@@ -18,7 +18,7 @@ Cette API fournit des fichiers audio du Coran récités par Al Hussary.
 
 ```javascript
 // Récupérer les informations sur les sources audio
-fetch('https://VOTRE_NOM_UTILISATEUR.github.io/quran-audio/data/audio-sources.json')
+fetch('https://REMPLACEZ_PAR_VOTRE_NOM_UTILISATEUR_GITHUB.github.io/quran-audio/data/audio-sources.json')
   .then(response => response.json())
   .then(data => {
     const hussaryBaseUrl = data.hussary.baseUrl;
